@@ -4,7 +4,7 @@ services:
     ports:
       - ${CUSTOM_DB2_DB_HOST_PORT:-50000}:50000
     privileged: true
-    restart: always
+    restart: on-failure
     environment:
       # https://www.ibm.com/docs/en/db2/12.1.0?topic=system-linux
       - LICENSE=accept
